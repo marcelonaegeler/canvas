@@ -74,8 +74,8 @@ var canvasApp = (function() {
   var saveTo = function() {
     var img = cv.toDataURL('image/png');
     var req = new XMLHttpRequest();
-    req.open('GET', 'save.php?img='+ img, true);
-    req.send(null);
+    req.open('POST', 'save.php', true);
+    req.send('img='+ img);
   };
 
   (function() {
